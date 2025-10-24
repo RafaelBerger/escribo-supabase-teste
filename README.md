@@ -8,10 +8,36 @@ O objetivo deste projeto era demonstrar habilidades em Supabase e Backend, cobri
 4.  ✅ **Criação de views** para consultar dados de forma eficiente.
 5.  ❌ **Criação de Edge Functions** para automação de tarefas como envio de e-mails de confirmação e exportação de CSV do pedido de um cliente. *(Não consegui concluir essa etapa devido ao tempo).*
 
+
+Este projeto foi desenvolvido com foco exclusivo na plataforma Supabase.
+
+**Todas as tarefas foram implementadas diretamente no SQL Editor do Supabase Studio.** O objetivo principal desse codigo no github é testar a eficácia das políticas de Row-Level Security (RLS), funções e views no próprio banco de dados PostgreSQL.
+
 ---
+## 🔑 Configuração de Variáveis de Ambiente (`.env`)
+
+A segurança do projeto depende da correta utilização das chaves da API.
+
+Crie um arquivo `.env` baseado neste modelo e preencha com suas chaves:
 
 
-# 💾 Configuração do Banco de Dados Supabase (Teste Backend)
+URL base do projeto Supabase
+
+SUPABASE_URL=`SUA_URL_DO_PROJETO`
+
+CHAVE PÚBLICA (Esta chave é segura e respeita todas as regras de RLS definidas.)
+
+SUPABASE_ANON_KEY=`SUA_CHAVE_ANON`
+
+CHAVE SECRETA (Essa chave ignora o todas as politicas de RLS)
+
+SUPABASE_SERVICE_ROLE_KEY=`SUA_CHAVE_SERVICE_ROLE`
+
+
+
+
+
+# 💾 Configuração do Banco de Dados Supabase
 
 Este documento detalha o script de inicialização do banco de dados para um sistema de pedidos e e-commerce básico. Ele deve ser executado no SQL Editor do Supabase Studio.
 
