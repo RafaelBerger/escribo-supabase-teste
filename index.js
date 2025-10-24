@@ -1,8 +1,12 @@
 require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
 
-// Inicializa o cliente do Supabase
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+// Inicializa o cliente do Supabase com ANON KEY
+// const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+
+
+// Inicializa o cliente do Supabase com Key de Admin que passa pelo RLS
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 // ================================
 // 🔍 CONSULTAS GERAIS
